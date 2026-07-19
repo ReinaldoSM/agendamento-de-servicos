@@ -32,6 +32,8 @@ diretamente no navegador.
 
 Também é possível utilizar a extensão **Live Server** no Visual Studio Code para executar o projeto localmente.
 
+Link público do site: https://reinaldosm.github.io/agendamento-de-servicos/
+
 ---
 
 ## 🚀 Tecnologias utilizadas
