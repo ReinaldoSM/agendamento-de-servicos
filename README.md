@@ -6,6 +6,34 @@ O objetivo do projeto é criar uma interface de agendamento, permitindo a seleç
 
 ---
 
+## 💻 Como executar o projeto localmente
+
+### 1. Clone o repositório
+
+```bash
+git clone -b King https://github.com/ReinaldoSM/agendamento-de-servicos.git
+```
+
+### 2. Acesse a pasta do projeto
+
+```bash
+cd agendamento-de-servicos
+```
+
+### 3. Execute o projeto
+
+Abra o arquivo:
+
+```bash
+index.html
+```
+
+diretamente no navegador.
+
+Também é possível utilizar a extensão **Live Server** no Visual Studio Code para executar o projeto localmente.
+
+---
+
 ## 🚀 Tecnologias utilizadas
 
 - **HTML5**  
@@ -37,34 +65,6 @@ Utilizado principalmente para:
 - Auxiliar em alguns ajustes de estilização utilizando CSS.
 
 As ferramentas foram utilizadas como apoio ao aprendizado, buscando compreender as soluções aplicadas e evoluir o conhecimento técnico durante o desenvolvimento.
-
----
-
-## 💻 Como executar o projeto localmente
-
-### 1. Clone o repositório
-
-```bash
-git clone URL_DO_REPOSITORIO
-```
-
-### 2. Acesse a pasta do projeto
-
-```bash
-cd nome-do-projeto
-```
-
-### 3. Execute o projeto
-
-Abra o arquivo:
-
-```
-index.html
-```
-
-diretamente no navegador.
-
-Também é possível utilizar extensões como **Live Server** no Visual Studio Code para executar o projeto em ambiente local.
 
 ---
 
