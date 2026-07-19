@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>AgendEasy</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="agend">Agend</span><span class="easy">Easy</span>
+            </div>
+            <ul id="menu">
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+            </ul>
+
+            <a href="./login.html"><button type="button" class="area-admin">Área Administrativa</button></a>
+
+            <!-- Botão hambúrguer: só aparece em telas pequenas (controlado pelo CSS) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <span>Agende seu Serviço</span>
+                <h1>É rápido, fácil e prático</h1>
+
+                <p>
+                    Escolha o serviço, data e horário e deixe o resto com a gente.
+                </p>
+
+
+            </div>
+
+            <div class="hero-image">
+                <img src="./assets/img/calendario.gif" alt="calendario">
+
+            </div>
+        </section>
+
+        <section class="como-funciona-section" id="como-funciona">
+            <h2 class="section-title">Como Funciona</h2>
+            <p class="como-funciona-texto">
+                Agendar seu horário no AgendEasy é simples: escolha o serviço desejado, selecione a data
+                e o horário disponível, preencha seus dados e pronto — seu agendamento é confirmado na
+                hora, sem complicação e sem precisar ligar pra ninguém.
+            </p>
+        </section>
+
+        <section class="servicos-section" id="servicos">
+            <h2 class="section-title">Nossos Serviços</h2>
+
+            <div class="servicos-grid">
+
+                <div class="servico-card" data-servico="Corte de Cabelo">
+                    <span class="servico-icone">✂️</span>
+                    <h3>Corte de Cabelo</h3>
+                    <p>Cortes modernos e clássicos, sob medida para você.</p>
+                </div>
+
+                <div class="servico-card" data-servico="Barba">
+                    <span class="servico-icone">🪒</span>
+                    <h3>Barba</h3>
+                    <p>Aparo e modelagem de barba com acabamento profissional.</p>
+                </div>
+
+                <div class="servico-card" data-servico="Coloração">
+                    <span class="servico-icone">🎨</span>
+                    <h3>Coloração</h3>
+                    <p>Coloração completa com produtos de qualidade.</p>
+                </div>
+
+            </div>
+
+            <p class="servicos-dica">Clique em um serviço para já deixá-lo selecionado no formulário abaixo.</p>
+        </section>
+
+        <section class="form-section">
+
+            <div class="form-card">
+                <div class="form-title">
+                    <i class="fa-regular fa calendar"></i>
+                    <h2>Formulário de Agendamento</h2>
+                </div>
+
+                <form id="agendamentoForm">
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" placeholder="Digite seu nome completo">
+                        </div>
+
+
+                    </div>
+                    <div class="input-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" placeholder="(11) 99999-9999">
+                    </div>
+
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label>Serviço</label>
+
+                            <select id="servico">
+                                <option value="Selecione um Serviço">Selecione um Serviço</option>
+
+                                <option value="Corte de Cabelo">Corte de Cabelo</option>
+
+                                <option value="Barba">Barba</option>
+
+                                <option value="Coloração">Coloração</option>
+
+
+                            </select>
+                        </div>
+
+                        <div class="date-selector">
+
+                            <label>Data</label>
+
+                            <button type="button" class="date-button">
+                                <span class="date-text">Escolha uma data</span>
+                            </button>
+
+
+
+                            <div class="date-options">
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="input-group">
+                            <label for="horario">Horário</label>
+
+                            <select id="horario">
+                                <option value="Selecione o Horário">Selecione o Horário</option>
+
+                                <option value="09:00">09:00</option>
+
+                                <option value="10:00">10:00</option>
+
+                                <option value="11:00">11:00</option>
+
+                                <option value="12:00">12:00</option>
+
+                                <option value="13:00">13:00</option>
+
+                            </select>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-group">
+                        <label>Observações</label>
+
+                        <textarea id="observacoes" rows="5" placehodler="Descreva detalhes sobre o serviço"></textarea>
+
+                    </div>
+
+                    <button type="submit" class="agend-service">
+                        Agendar Serviço
+                    </button>
+
+
+
+                </form>
+
+
+
+            </div>
+
+
+
+        </section>
+
+    </main>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

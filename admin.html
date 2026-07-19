@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>AgendEasy - Painel Administrativo</title>
+</head>
+
+<body>
+
+    <header class="admin-header">
+        <div class="logo">
+            <span class="agend">Agend</span><span class="easy">Easy</span>
+        </div>
+
+        <div class="admin-header-botoes">
+            <a href="./index.html"><button type="button" class="area-admin">Início</button></a>
+            <button id="botaoSair" class="area-admin">Sair</button>
+        </div>
+    </header>
+
+    <main class="admin-main">
+
+        <h1 class="admin-title">Agendamentos</h1>
+
+        <div class="cards-resumo">
+
+            <div class="card-resumo">
+                <div class="card-resumo-topo">
+                    <span class="card-resumo-titulo">Total de Agendamentos</span>
+                    <span class="card-resumo-icone icone-total">📅</span>
+                </div>
+                <span class="card-resumo-numero" id="cardTotal">0</span>
+            </div>
+
+            <div class="card-resumo">
+                <div class="card-resumo-topo">
+                    <span class="card-resumo-titulo">Pendentes</span>
+                    <span class="card-resumo-icone icone-pendente">⏳</span>
+                </div>
+                <span class="card-resumo-numero" id="cardPendentes">0</span>
+                <span class="card-resumo-legenda">Aguardando atendimento</span>
+            </div>
+
+            <div class="card-resumo">
+                <div class="card-resumo-topo">
+                    <span class="card-resumo-titulo">Concluídos</span>
+                    <span class="card-resumo-icone icone-concluido">✅</span>
+                </div>
+                <span class="card-resumo-numero" id="cardConcluidos">0</span>
+            </div>
+
+            <div class="card-resumo">
+                <div class="card-resumo-topo">
+                    <span class="card-resumo-titulo">Cancelados</span>
+                    <span class="card-resumo-icone icone-cancelado">❌</span>
+                </div>
+                <span class="card-resumo-numero" id="cardCancelados">0</span>
+            </div>
+
+        </div>
+
+        <div class="filtro-container">
+            <label for="filtroData">Filtrar por data:</label>
+            <input type="date" id="filtroData">
+            <button id="botaoLimparFiltro" type="button" class="area-admin">Limpar filtro</button>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Telefone</th>
+                        <th>Serviço</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <!-- Aqui dentro o JS vai criar uma linha <tr> para cada agendamento -->
+                <tbody id="tabelaAgendamentos">
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Mensagem que aparece só quando não existe nenhum agendamento salvo -->
+        <p id="mensagemVazia" class="mensagem-vazia" style="display: none;">
+            Nenhum agendamento encontrado ainda.
+        </p>
+
+    </main>
+
+    <script src="./admin.js"></script>
+
+</body>
+
+</html>
